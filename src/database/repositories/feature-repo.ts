@@ -1,6 +1,6 @@
-import { IFeatureRepository } from "@database/repositories/interface/feature-repo-interface";
-import Feature from "@model/feature.model";
-import { IFeature } from "types/feature-types";
+import { IFeatureRepository } from "../../database/repositories/interface/feature-repo-interface";
+import Feature from "../../model/feature.model";
+import { IFeature } from "../../types/feature-types";
 import { Types } from "mongoose";
 
 export class FeatureRepository implements IFeatureRepository {

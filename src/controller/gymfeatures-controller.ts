@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import GymFeatureService from "@service/gymfeature-service";
+import GymFeatureService from "../service/gymfeature-service";
 const gymFeatureService = new GymFeatureService();
 
 export async function assignFeaturesToGym(req: Request, res: Response) {

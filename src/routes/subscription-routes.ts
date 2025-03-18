@@ -1,8 +1,8 @@
 import express from 'express';
-import * as controller from '@controller/subscription-controller';
-import { authorizeRole } from '@middleware/authorizer.middleware';
-import { validateRequest } from '@middleware/validateRequest.middleware';
-import { createPlanSchema, updatePlanSchema } from '@validation/subscription-validation';     
+import * as controller from '../controller/subscription-controller';
+import { authorizeRole } from '../middleware/authorizer.middleware';
+import { validateRequest } from '../middleware/validateRequest.middleware';
+import { createPlanSchema, updatePlanSchema } from '../validation/subscription-validation';     
 
 const router = express.Router();
 

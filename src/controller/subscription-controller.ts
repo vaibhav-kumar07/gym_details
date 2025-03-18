@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import SubscriptionPlanService from '@service/subscription-service';
-import { tryCatchHandler } from '@middleware/error.middleware';
+import SubscriptionPlanService from '../service/subscription-service';
+import { tryCatchHandler } from '../middleware/error.middleware';
 
 const subscriptionPlanService = new SubscriptionPlanService();
 

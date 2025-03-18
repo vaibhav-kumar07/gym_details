@@ -1,5 +1,5 @@
-import { ISubscription } from "types/subscription-types";
-import SubscriptionPlan from '@model/subscription.model';
+import { ISubscription } from "../../types/subscription-types";
+import SubscriptionPlan from '../../model/subscription.model';
 import { Types } from 'mongoose';
 
 export class SubscriptionPlanRepository {

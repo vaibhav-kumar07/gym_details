@@ -1,6 +1,6 @@
-import { IGymFeatureRepository } from "@database/repositories/interface/gymfeature-repo-interface";
-import GymFeatureModel from "@model/gymfeature.model";
-import { IGymFeature } from "types/gymFeature-types";
+import { IGymFeatureRepository } from "../../database/repositories/interface/gymfeature-repo-interface";
+import GymFeatureModel from "../../model/gymfeature.model";
+import { IGymFeature } from "../../types/gymFeature-types";
 import { Types } from "mongoose";
 
 export class GymFeatureRepository implements IGymFeatureRepository {
@@ -37,7 +37,7 @@ export class GymFeatureRepository implements IGymFeatureRepository {
     if (gymFeature) {
       // Remove specified features from the array
       gymFeature.featureIds = gymFeature.featureIds.filter(
-        (id) => !featureIds.includes(id.toString())
+        (id: Types.ObjectId) => !featureIds.includes(id.toString())
       );
       await this.save(gymFeature, false);
     }

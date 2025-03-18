@@ -1,9 +1,9 @@
 import express from 'express';
-import * as controller from '@controller/gymlegalinfo-controller';
-import { authorizeRole } from '@middleware/authorizer.middleware';
-import { validateRequest } from '@middleware/validateRequest.middleware';
-import { createLegalInfoSchema, updateLegalInfoSchema } from '@validation/gymlegalinfo-validation';  
-import { tryCatchHandler } from '@middleware/error.middleware';
+import * as controller from '../controller/gymlegalinfo-controller';
+import { authorizeRole } from '../middleware/authorizer.middleware';
+import { validateRequest } from '../middleware/validateRequest.middleware';
+import { createLegalInfoSchema, updateLegalInfoSchema } from '../validation/gymlegalinfo-validation';  
+import { tryCatchHandler } from '../middleware/error.middleware';
 
 const router = express.Router();
 

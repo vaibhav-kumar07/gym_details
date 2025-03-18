@@ -1,9 +1,14 @@
-import mongoose, { Schema } from 'mongoose';
-import { IGymLegalInfo } from 'types/gymlegalinfo-types';
+import mongoose, { Schema } from "mongoose";
+import { IGymLegalInfo } from "../types/gymlegalinfo-types";
 
 const gymLegalInfoSchema: Schema = new Schema(
   {
-    gymId: { type: Schema.Types.ObjectId, ref: 'Gym', required: true, unique: true },
+    gymId: {
+      type: Schema.Types.ObjectId,
+      ref: "Gym",
+      required: true,
+      unique: true,
+    },
     registrationDetails: {
       number: { type: String, required: true, unique: true },
       issuedBy: { type: String, default: null },
@@ -22,7 +27,10 @@ const gymLegalInfoSchema: Schema = new Schema(
       },
     ],
   },
-  { timestamps: true, collection: 'legalinfo' }
+  { timestamps: true, collection: "legalinfo" }
 );
 
-export default mongoose.model<IGymLegalInfo>('GymLegalInfo', gymLegalInfoSchema);
+export default mongoose.model<IGymLegalInfo>(
+  "GymLegalInfo",
+  gymLegalInfoSchema
+);

@@ -1,8 +1,8 @@
 import express from 'express';
-import * as controller from 'controller/equipment-controller';
-import { authorizeRole } from '@middleware/authorizer.middleware';
-import { validateRequest } from '@middleware/validateRequest.middleware';
-import { createEquipmentSchema, updateEquipmentSchema } from 'validation/equipment-validation';
+import * as controller from '../controller/equipment-controller';
+import { authorizeRole } from '../middleware/authorizer.middleware';
+import { validateRequest } from '../middleware/validateRequest.middleware';
+import { createEquipmentSchema, updateEquipmentSchema } from '../validation/equipment-validation';
 
 const router = express.Router();
 

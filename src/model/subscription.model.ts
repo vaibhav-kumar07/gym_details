@@ -1,4 +1,4 @@
-import { ISubscription } from 'types/subscription-types';
+import { ISubscription } from '../types/subscription-types';
 import mongoose, { Schema, Document } from 'mongoose';
 
 

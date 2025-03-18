@@ -1,9 +1,9 @@
 import express from 'express';
-import * as controller from '@controller/gymmedia-controller';   
-import { authorizeRole } from '@middleware/authorizer.middleware';
-import { validateRequest } from '@middleware/validateRequest.middleware';
-import { createMediaSchema, updateMediaSchema } from '@validation/gymmedia-validation';
-import { tryCatchHandler } from '@middleware/error.middleware';
+import * as controller from '../controller/gymmedia-controller';   
+import { authorizeRole } from '../middleware/authorizer.middleware';
+import { validateRequest } from '../middleware/validateRequest.middleware';
+import { createMediaSchema, updateMediaSchema } from '../validation/gymmedia-validation';
+import { tryCatchHandler } from '../middleware/error.middleware';
 const router = express.Router();
 
 router.post('/', authorizeRole(['owner']), validateRequest(createMediaSchema), tryCatchHandler(controller.create));

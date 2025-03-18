@@ -1,4 +1,4 @@
-import { IFeature } from "types/feature-types";
+import { IFeature } from "../../../types/feature-types";
 
 export interface IFeatureRepository {
   //make save function can be used to create or update a feature for internal functino only ,cannot called from outside

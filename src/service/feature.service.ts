@@ -1,11 +1,11 @@
-import Feature from "@model/feature.model";
-import { IFeature } from "types/feature-types";
+
+import { IFeature } from "../types/feature-types";
 import {
   CreateFeatureInput,
   UpdateFeatureInput,
-} from "@validation/feature-validation";
-import { FeatureRepository } from "@database/repositories/feature-repo";
-import { throwBusinessError } from "@utils/error.utils";
+} from "../validation/feature-validation";
+import { FeatureRepository } from "../database/repositories/feature-repo";
+import { throwBusinessError } from "../utils/error.utils";
 
 export default class FeatureService {
   private _featureRepo = new FeatureRepository();

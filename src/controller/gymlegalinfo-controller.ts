@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import GymLegalInfoService from '@service/gymlegalinfo-service';
+import GymLegalInfoService from '../service/gymlegalinfo-service';
 
 const registrationService = new GymLegalInfoService();
 

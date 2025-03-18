@@ -1,7 +1,7 @@
 
-import { ISubscription } from "types/subscription-types";
-import { SubscriptionPlanRepository } from "@database/repositories/subscription-repo";
-import { throwBusinessError } from "@utils/error.utils";
+import { ISubscription } from "../types/subscription-types";
+import { SubscriptionPlanRepository } from "../database/repositories/subscription-repo";
+import { throwBusinessError } from "../utils/error.utils";
 
 export default class SubscriptionPlanService {
   private _subscriptionPlanRepo = new SubscriptionPlanRepository();

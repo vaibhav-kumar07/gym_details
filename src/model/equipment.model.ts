@@ -1,4 +1,4 @@
-import { IEquipment } from 'types/equipment-types';
+import { IEquipment } from '../types/equipment-types';
 import mongoose, { Schema,  } from 'mongoose';
 
 const EquipmentSchema: Schema = new Schema({

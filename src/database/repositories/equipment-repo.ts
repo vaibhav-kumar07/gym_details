@@ -1,7 +1,7 @@
-import { IEquipment } from 'types/equipment-types';
-import EquipmentModel from 'model/equipment.model';
+import { IEquipment } from '../../types/equipment-types';
+import EquipmentModel from '../../model/equipment.model';
 import { Types } from 'mongoose';
-import { throwBusinessError } from '@utils/error.utils';
+import { throwBusinessError } from '../../utils/error.utils';
   
 export class EquipmentRepository {
   async save(equipmentData: Partial<IEquipment>, isNew: boolean = true): Promise<IEquipment> {

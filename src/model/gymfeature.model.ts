@@ -1,4 +1,4 @@
-import { IGymFeature } from "types/gymFeature-types";
+import { IGymFeature } from "../types/gymFeature-types";
 import mongoose, { Schema } from "mongoose";
 
 const gymFeatureSchema = new Schema<IGymFeature>(

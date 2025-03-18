@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import FeatureService from "@service/feature.service";
+import FeatureService from "../service/feature.service";
 
 const featureService = new FeatureService();
 

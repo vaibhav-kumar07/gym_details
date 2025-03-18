@@ -1,5 +1,5 @@
 import GymLegalInfo from '../../model/gymlegalinfo.model';
-import { IGymLegalInfo } from 'types/gymlegalinfo-types';
+import { IGymLegalInfo } from '../../types/gymlegalinfo-types';
 
 export class GymLegalInfoRepository {
   async save(data: Partial<IGymLegalInfo>, isNew: boolean = true): Promise<IGymLegalInfo> {

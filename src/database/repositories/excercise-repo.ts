@@ -1,6 +1,6 @@
-import Exercise from "@model/exercise.model";
+import Exercise from "../../model/exercise.model";
 import { Types } from 'mongoose';
-import { IExercise } from "types/exercise-types";
+import { IExercise } from "../../types/exercise-types";
 
 export default class ExerciseRepository {
   async save(exerciseData: Partial<IExercise>, isNew: boolean = true): Promise<IExercise> {

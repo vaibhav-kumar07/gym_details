@@ -1,15 +1,16 @@
-import { Types } from 'mongoose';
+import { Types, Schema } from "mongoose";
 
 export interface IGymBusinessHours {
-  gymId: Types.ObjectId;
+  _id?: Schema.Types.ObjectId;
+  gymId: Schema.Types.ObjectId | string;
   timings: {
-    timeSlotId: string; // Changed to string
+    timeSlotId: string;
     openTime: string;
     closeTime: string;
   }[];
   schedules: {
     days: string[];
-    timeSlotId: string; // Changed to string
+    timeSlotId: string;
   }[];
   closedDays: string[];
   holidays: {

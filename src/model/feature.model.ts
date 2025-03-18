@@ -1,4 +1,4 @@
-import { IFeature } from "types/feature-types";
+import { IFeature } from "../types/feature-types";
 import mongoose, { Schema, Document } from "mongoose";
 
 const featureSchema = new Schema(

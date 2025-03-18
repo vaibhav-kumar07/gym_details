@@ -1,6 +1,6 @@
 ///write only gym related featuresroutes only
 import express from "express";
-import * as gymController from "@controller/gymfeatures-controller";
+import * as gymController from "../controller/gymfeatures-controller";
 
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-import { IGymFeature } from "types/gymFeature-types";
+import { IGymFeature } from "../../../types/gymFeature-types";
 
 export interface IGymFeatureRepository {
   assignFeatures(gymId: string, featureIds: string[]): void;

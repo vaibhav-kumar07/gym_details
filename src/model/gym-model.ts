@@ -1,8 +1,7 @@
-import { IGym } from 'types/gym-types';
-import mongoose, { Schema, Document } from 'mongoose';
+import { IGym, IGymStatus } from "../types/gym-types";
+import mongoose, { Schema, Document } from "mongoose";
 
-
-const gymSchema: Schema = new Schema(
+const gymSchema: Schema = new Schema<IGym>(
   {
     name: { type: String, required: true, trim: true },
     address: {
@@ -16,17 +15,17 @@ const gymSchema: Schema = new Schema(
       phoneNumber: { type: String, required: true },
       email: { type: String, required: true, unique: true },
     },
-    ownerId: { type: Schema.Types.ObjectId, ref: "Owner", required: true },
+    ownerId: { type: String, required: true },
     status: {
       type: String,
-      enum: ["active", "inactive", "suspended"],
-      default: "active",
+      enum: [IGymStatus.Active, IGymStatus.InActive, IGymStatus.Suspended],
+      default: IGymStatus.Active,
     },
-    registrationInfo: { type: Schema.Types.ObjectId, ref: "GymRegistration" },
-    media: { type: Schema.Types.ObjectId, ref: "GymMedia" },
-    businessHours: [{ type: Schema.Types.ObjectId, ref: "GymBusinessHours" }],
+    legalInfo: { type: Schema.Types.ObjectId, ref: "legalinfo" },
+    media: { type: Schema.Types.ObjectId, ref: "media" },
+    businessHours: { type: Schema.Types.ObjectId, ref: "businesshour" },
   },
   { timestamps: true, collection: "gym" }
 );
 
-export default mongoose.model<IGym>('Gym', gymSchema);
+export default mongoose.model<IGym>("Gym", gymSchema);

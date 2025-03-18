@@ -1,6 +1,6 @@
 import { EquipmentRepository } from '../database/repositories/equipment-repo';
 import { IEquipment } from '../types/equipment-types';
-import { throwBusinessError } from '@utils/error.utils';
+import { throwBusinessError } from '../utils/error.utils';
 
 export default class EquipmentService {
   private _equipmentRepo = new EquipmentRepository();

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import ExerciseService from '@service/excercise-service';
-import { tryCatchHandler } from '@middleware/error.middleware';
+import ExerciseService from '../service/excercise-service';
+import { tryCatchHandler } from '../middleware/error.middleware';
 
 const exerciseService = new ExerciseService();
 

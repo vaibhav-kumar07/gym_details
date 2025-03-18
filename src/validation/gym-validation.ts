@@ -1,5 +1,5 @@
 import { z } from 'zod';
-
+import { IGymStatus } from '../types/gym-types';
 export const addressSchema = z.object({
   street: z.string().min(1, "Street is required"),
   city: z.string().min(1, "City is required"),
@@ -17,11 +17,10 @@ export const createGymSchema = z.object({
   name: z.string().min(1, "Name is required"),
   address: addressSchema,
   contactInfo: contactInfoSchema,
-  ownerId: z.string().min(1, "Owner ID is required"),
-  status: z.enum(["active", "inactive", "suspended"]).default("active"),
-  registrationInfo: z.string().optional(),
+  status: z.enum([IGymStatus.Active,IGymStatus.InActive,IGymStatus.Suspended]).default(IGymStatus.Active),
+  legalInfo: z.string().optional(),
   media: z.string().optional(),
-  businessHours: z.array(z.string()).optional(),
+  businessHours: z.string().optional(),
 });
 
 export const updateGymSchema = createGymSchema.partial();

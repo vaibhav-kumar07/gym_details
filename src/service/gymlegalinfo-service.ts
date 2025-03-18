@@ -1,5 +1,5 @@
 import { GymLegalInfoRepository } from '../database/repositories/gymlegalinfo-repo';
-import { IGymLegalInfo } from 'types/gymlegalinfo-types';
+import { IGymLegalInfo } from '../types/gymlegalinfo-types';
 
 export default class GymLegalInfoService {
   private _registrationRepo = new GymLegalInfoRepository();

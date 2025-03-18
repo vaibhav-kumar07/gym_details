@@ -1,5 +1,5 @@
 import GymMedia from "../../model/gymmedia.model";
-import { IGymmedia } from "types/gymmedia-types";
+import { IGymmedia } from "../../types/gymmedia-types";
 
 export class GymMediaRepository {
   async save(data: Partial<IGymmedia>, isNew: boolean = true): Promise<IGymmedia> {

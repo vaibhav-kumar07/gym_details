@@ -1,4 +1,4 @@
-import { IExercise } from "types/exercise-types";
+import { IExercise } from "../types/exercise-types";
 import mongoose, { Schema, Document } from "mongoose";
 
 

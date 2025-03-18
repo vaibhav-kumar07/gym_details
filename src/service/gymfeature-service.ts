@@ -1,6 +1,6 @@
-import { IGymFeature } from "types/gymFeature-types";
-import { throwBusinessError } from "@utils/error.utils";
-import { GymFeatureRepository } from "@database/repositories/gymfeature-repo";
+import { IGymFeature } from "../types/gymFeature-types";
+import { throwBusinessError } from "../utils/error.utils";
+import { GymFeatureRepository } from "../database/repositories/gymfeature-repo";
 import FeatureService from "./feature.service";
 
 export default class GymFeatureService {

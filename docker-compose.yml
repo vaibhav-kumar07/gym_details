@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  gym_service:
+    build: .
+    container_name: gym_service
+    ports:
+      - "4002:4002"
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - gym_network
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - gym_network
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - gym_network
+
+networks:
+  gym_network:
+
+volumes:
+  mongo_data:

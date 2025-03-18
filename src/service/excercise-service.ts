@@ -1,6 +1,6 @@
-import ExerciseRepository from '@database/repositories/excercise-repo';
-import { IExercise } from 'types/exercise-types';
-import { throwBusinessError } from '@utils/error.utils';
+import ExerciseRepository from '../database/repositories/excercise-repo';
+import { IExercise } from '../types/exercise-types';
+import { throwBusinessError } from '../utils/error.utils';
 
 export default class ExerciseService {
   private _exerciseRepo = new ExerciseRepository();
